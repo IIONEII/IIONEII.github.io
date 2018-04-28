@@ -1,0 +1,187 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+header {
+	background: linear-gradient(to right,#76dafe,#2fe1a5);
+	width: 750px;
+	height: 88px;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+.search {
+	width: 580px;
+	height: 60px;
+	margin-top: 14px;
+	margin-left: 24px;
+	border-radius: 10px;
+	background-color: #f2f2f2;
+	display: flex;
+}
+#search {
+	width: 476px;
+	height: 60px;
+	border: none;
+	outline: none;
+	margin: 0 20px;
+	color: #999;
+	font-size: 30px;
+	background-color: #f2f2f2;
+}
+.searchicon {
+	width: 44px;
+	height: 44px;
+	background-image: url(../images/search.png);
+	margin: 8px 20px 8px 0;
+}
+.cancel {
+	width: 120px;
+	height: 60px;
+	margin-top: 14px;
+	color: #fff;
+	font-size: 36px;
+	line-height: 60px;
+	text-align: center;
+}
+
+
+section {
+	width: 750px;
+	padding: 0 24px;
+	margin-top: 88px;
+	margin-bottom: 200px;
+	background-color: white;
+}
+
+.somesearch {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.searchheader {
+	height: 30px;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.somesearch > ul {
+	display: flex;
+	margin-bottom: 30px;
+}
+.somesearch > ul > li {
+	padding: 8px 10px;
+	background-color: #f2f2f2;
+	color: #393939;
+	font-size: 24px;
+	margin-right: 20px;
+	border-radius: 8px;
+}
+
+
+.filter > div {
+	margin-bottom: 36px;
+	display: flex;
+	align-items: center;
+}
+.filter ul {
+	display: flex;
+	width: 480px;
+}
+.filtericon {
+	width: 44px;
+	height: 44px;
+	margin-right: 30px;
+}
+.filter p {
+	font-size: 22px;
+	color: #393939;
+	margin-right: 30px;
+}
+.filter .filevelco {
+	margin-right: 43px;
+}
+.filter ul > li {
+	padding: 6px 10px;
+	border-radius: 10px;
+	margin-right: 30px;
+	line-height: 30px;
+}
+
+
+
+
+.result > p {
+	font-size: 24px;
+	color: #868686;
+	margin-bottom: 20px;
+}
+.result > p > span {
+	padding: 0 10px;
+}
+.resultline {
+	width: 702px;
+	border: 0.5px solid #868686;
+	margin-bottom: 30px;
+}
+.filterheader {
+	margin-bottom: 30px;
+	color: #000;
+	display: flex;
+}
+.filterheader .fihechange {
+    width: 140px;
+    margin-right: 50px;
+    font-size: 24px;
+}
+.filterheader .fiheschool {
+	width: 375px;
+	margin-right: 30px;
+	font-size: 24px;
+}
+.filterheader .fihescore {
+	width: 100px;
+	font-size: 24px;
+}
+.result > ul {
+	display: flex;
+	margin-bottom: 30px;
+}
+.fireimg {
+	width: 140px;
+	height: 140px;
+	margin-right: 50px;
+}
+.firename {
+	width: 375px;
+	height: 140px;
+	margin-right: 30px;
+}
+.firename > h3 {
+	padding-top: 10px;
+	color: #393939;
+	font-size: 24px;
+}
+.firename > p {
+	font-size: 24px;
+	color: #868686;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-top: 10px;
+}
+.firescore {
+	width: 100px;
+	height: 140px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 48px;
+	color: #393939;
+}

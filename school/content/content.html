@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+	<script type='text/javascript' src='../../same/jquery-2.0.2.js'></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6lsgFnhhpDPbToOu3vZOvCQpiBPANIze"></script>
+	<style type='text/css'>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#main {
+			background: linear-gradient(to right,#76dafe,#2fe1a5);
+			width: 750px;
+		}
+		#navigation {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(to right,#76dafe,#2fe1a5);
+			width: 100%;
+			height: 98px;
+			z-index: 100;
+		}
+		.nav-bar {
+			width: 630px;
+			height: 88px;
+			margin: 0 auto;
+			margin-top: 10px;
+			display: flex;
+		}
+		.nav-bar li {
+			list-style: none;
+			width: 50px;
+			height: 82px;
+			margin-right: 144px;
+		}
+		.nav-bar li span {
+			display: block;
+			text-align: center;
+			font-size: 22px;
+			color: white;
+			margin-bottom: -15px;
+		}
+	</style>
+</head>
+<body>
+    <div id="main">
+    	<div id='navigation'>
+    		<ul class='nav-bar'>
+    			<li class='first-bar'><img src='../../images/first1.png'><span>首页</span></li>
+    			<li class='second-bar'><img src='../../images/second.png'><span>审核</span></li>
+    			<li class='third-bar'><img src='../../images/third.png'><span>消息</span></li>
+    			<li class='fourth-bar'><img src='../../images/fourth.png'><span>我的</span></li>
+    		</ul>
+    	</div>
+    	<script type="text/javascript">
+    		$(document).ready(function() {
+                $(".first-bar").on("touchstart",function() { location.href='../../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../../mine.html'; });
+            });
+    	</script>
+
+    	<header>
+    		<ul class="headercontent">
+    			<li class="heco1"></li>
+    			<li class="heco2">
+                    <div class="hecoin">
+    				    <h2>硕士</h2>
+    				    <div></div>
+                    </div>
+    			</li>
+    		</ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+            </script>
+    	</header>
+    	<section>
+    		<ul class="contentnav">
+        		<li id="college"><h2>学院概况</h2>
+                    <div class="collegecon contentsame">
+                        <h1>学院概况</h1>
+                        <div><img src="images/1.png"></div>
+                        <p>曼彻斯特大学，简称曼大，是一所门类齐全、科系众多的综合性大学。校内现有来自超过160个国家的近四万名学生就读一千多个学位课程，教职员超过一万人，其中很多是享誉世界的科学家。曼大以教学严谨、学术风气自由著称，创新作为教学和学术研究的主导思想，已形成传统。世界上很多重大成就都出自这里，如原子的分裂、世界上第一台可存储程序计算机的发明以及石墨烯的发现等。 曼大的教学质量始终位居英国独立教学质量评估的前列，每年的全球大学排名也始终位居世界前列，校友包括25位诺贝尔奖得主和众多国际名人。</p>
+                    </div>
+                </li>
+        		<li id="teach"><h2>教学设施</h2>
+                    <div class="teachcon contentsame">
+                        <h1>教学设施</h1>
+                        <div><img src="images/6.png"></div>
+                        <p>曼大图书馆是全英第三大学术类图书馆，也是英国五个国家级研究型图书馆之一，共藏有400多万册各类纸质书籍与期刊，以及近100万电子书刊，还有几百个数据库。曼大图书馆由主图书馆、Alan Gilbert学习共享空间（Learning Commons）及其他九个图书馆组成。其中，约翰赖兰兹图书馆（John Rylands Library）被广泛认为是世界上最美的图书馆之一。 <br>
+                        为丰富学生的课外生活，曼大修建了两个室内运动中心、两个室外运动场和曼彻斯特水上活动中心（2002年英联邦运动会游泳等项目的比赛就在此举行），足以满足开展大部分体育运动的需要。大学拥有的曼彻斯特博物馆全年向公众免费开放。另外，学生会还提供咖啡馆、食品店、俱乐部等一系列服务设施。
+                        </p>
+                    </div>
+                </li>
+        		<li id="history"><h2>学校历史</h2>
+                    <div class="historycon contentsame">
+                        <h1>学校历史</h1>
+                        <div><img src="images/2.png"></div>
+                        <p>曼彻斯特大学是由曼彻斯特维多利亚大学（Victoria University of Manchester）和曼彻斯特理工大学（UMIST）合并而成。<br>
+                        曼大的历史最早可追溯到1824年，那年由近代化学之父约翰•道尔顿（John Dalton）等人创办的曼彻斯特机械学院成立，后发展成为曼彻斯特理工大学。曼彻斯特维多利亚大学始建于1851年，那时称作欧文斯学院，命名来自于纺织商人约翰•欧文斯（John Owens），正是他用96,942英镑创办了这所学院。此后，曼彻斯特欧文斯学院首先发起了“市立大学运动”，并在1880年成为第一批被授予皇家宪章的市立大学。<br>
+                        2004年10月22日，曼彻斯特维多利亚大学与曼彻斯特理工大学合并，从此组成了英国最大的单一校址大学，新的学校被称为曼彻斯特大学。
+                        </p>
+                    </div>
+                </li>
+        		<li id="advantage"><h2>优势专业</h2>
+                    <div class="advantagecon">
+                        <ul class="advantageco">
+                            <li class="all"><p>全部</p>
+                                <ul class="allcon adsamecon">
+                                    <li>
+                                        <h2 class="zhname">会记学</h2>
+                                        <p class="enname">Accounting</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：1年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">古代历史</h2>
+                                        <p class="enname">Ancient History</p>
+                                        <div class="degree">
+                                            <span>学位类型：BA</span>
+                                            <span>时长：2年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">人类学</h2>
+                                        <p class="enname">Anthropology</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：1年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">自然科学</h2>
+                                        <p class="enname">Natural sciences</p>
+                                        <div class="degree">
+                                            <span>学位类型：MSC</span>
+                                            <span>时长：4年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">应用心理学</h2>
+                                        <p class="enname">Psychology（Applied）</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：4年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">生物学</h2>
+                                        <p class="enname">Biology</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：4年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">化学</h2>
+                                        <p class="enname">Chemistry</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：2年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">古典学</h2>
+                                        <p class="enname">Classics</p>
+                                        <div class="degree">
+                                            <span>学位类型：BA</span>
+                                            <span>时长：3年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="business"><p>商科</p>
+                                <ul class="allcon adsamecon">
+                                    <li>
+                                        <h2 class="zhname">商务管理</h2>
+                                        <p class="enname">Business and Management</p>
+                                        <div class="degree">
+                                            <span>学位类型：BA</span>
+                                            <span>时长：3年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">经济学管理</h2>
+                                        <p class="enname">Economics with Management</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：1年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="economics"><p>经济金融</p>
+                                <ul class="allcon adsamecon">
+                                    <li>
+                                        <h2 class="zhname">会记学</h2>
+                                        <p class="enname">Accounting</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：1年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">金融学</h2>
+                                        <p class="enname">Finance</p>
+                                        <div class="degree">
+                                            <span>学位类型：BA</span>
+                                            <span>时长：3年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="object"><p>工科</p>
+                                <ul class="allcon adsamecon">
+                                    <li>
+                                        <h2 class="zhname">数学</h2>
+                                        <p class="enname">Mathematics</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：2年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">化学</h2>
+                                        <p class="enname">Chemistry</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：4年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">计算机科学</h2>
+                                        <p class="enname">Computer Science</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：4年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="art"><p>艺术</p>
+                                <ul class="allcon adsamecon">
+                                    <li>
+                                        <h2 class="zhname">音乐</h2>
+                                        <p class="enname">Music</p>
+                                        <div class="degree">
+                                            <span>学位类型：BA</span>
+                                            <span>时长：1年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">艺术（综合学位）</h2>
+                                        <p class="enname">Combined Honours in Arts</p>
+                                        <div class="degree">
+                                            <span>学位类型：BA</span>
+                                            <span>时长：1年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">古代古典学</h2>
+                                        <p class="enname">Classical Past</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：3年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="medicine"><p>医药</p>
+                                <ul class="allcon adsamecon">
+                                    <li>
+                                        <h2 class="zhname">生物医药科学</h2>
+                                        <p class="enname">Biomedical Science</p>
+                                        <div class="degree">
+                                            <span>学位类型：BA</span>
+                                            <span>时长：4年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h2 class="zhname">药店（含预科）</h2>
+                                        <p class="enname">Pharmacy with Foundation</p>
+                                        <div class="degree">
+                                            <span>学位类型：BSC</span>
+                                            <span>时长：1年</span>
+                                            <div class="entercondition">
+                                                <h3>入学条件</h3>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="encocontent">
+                                            <h3>学费：12300镑</h3>
+                                            <p>雅思要求IELTS：7.0（no component under 6.0）</p>
+                                            <p>申请要求：The standard minimum entry requirement to study.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        $(".entercondition").each(function() {
+                            $(this).on("touchstart",function() {
+                                $(this).parent().siblings('.encocontent').slideToggle('slow');
+                                $(this).parent().siblings('.encocontent').children("div").css({"transform":"rotate(180deg)"});
+                            });
+                        });
+                    </script>
+                </li>
+        		<li id="condition"><h2>食宿条件</h2>
+                    <div class="conditioncon contentsame">
+                        <h1>住宿条件</h1>
+                        <div><img src="images/5.png"></div>
+                        <p>曼大的学生公寓多达20幢，可提供8,000多间各类宿舍。宿舍均有共享或单独的电话和Internet接口、厨房、厕所、浴室及洗衣房，无论环境还是设施均为英国大学一流水准。宿舍房型有单人间和少数可供家庭住宿的双人及三人间，学生可以根据个人需要自由选择。学校为所有一年级的本科生和国际研究生提供住宿，而对国际本科生则提供与在读时间相当的住宿。</p>
+                    </div>
+                </li>
+        		<li id="location"><h2>地理位置</h2>
+                    <div class="locationcon contentsame">
+                        <h1>地理位置</h1>
+                        <div id="container" style="width: 600px;height: 600px"></div>
+                        <p></p>
+                    </div>
+                    <script type="text/javascript">
+                        var map = new BMap.Map("container");    
+                        var point = new BMap.Point(0.1149085000,52.2042666000);    
+                        map.centerAndZoom(point, 15);
+                        var marker = new BMap.Marker(point); 
+                        map.addOverlay(marker);
+                    </script>
+                </li>
+    	    </ul>
+            <script type="text/javascript">
+                $(".contentnav > li > h2").each(function() {
+                    $(this).on('touchstart',function() {
+                        $(".contentnav >li >h2").not(this).css({'backgroundColor':'transparent','color':'white'});
+                        if ($(this).html()=="优势专业") {
+                            $(".heco2").css("display","block");
+                        } else {
+                            $(".heco2").css("display","none");
+                        }
+                        $(this).css({'backgroundColor':'white','color':'black'});
+                        $(".contentnav >li > div").not($(this).next()).css("display","none");
+                        $(this).next().css("display","block");
+                    });
+                });
+                var result=location.search.substr(9);
+                switch(result) {
+                    case "college": $("#college").children("h2").css({'backgroundColor':'white','color':'black'});
+                                    $(".collegecon").css("display","block");break;
+                    case "teach": $("#teach").children("h2").css({'backgroundColor':'white','color':'black'});
+                                    $(".teachcon").css("display","block");break;
+                    case "history": $("#history").children("h2").css({'backgroundColor':'white','color':'black'});
+                                    $(".historycon").css("display","block");break;
+                    case "advantage": $("#advantage").children("h2").css({'backgroundColor':'white','color':'black'});
+                                    $(".advantagecon").css("display","block");$(".all > p").css({'backgroundColor':'white','color':'black'});$(".allcon").css("display","block");break;
+                    case "condition": $("#condition").children("h2").css({'backgroundColor':'white','color':'black'});
+                                    $(".conditioncon").css("display","block");break;
+                    case "location": $("#location").children("h2").css({'backgroundColor':'white','color':'black'});
+                                    $(".locationcon").css("display","block");break;
+                }
+            </script>
+                <script type="text/javascript">
+                    $(".advantageco > li > p").each(function() {
+                        $(this).on("touchstart",function() {
+                            $(".advantageco > li > p").not(this).css({'backgroundColor':'transparent','color':'white'});
+                            $(".advantageco > li > p").not(this).parent().parent().siblings(".insame").css("display","none");
+                            $(this).css({'backgroundColor':'white','color':'black'});
+                            $(".advantageco > li > ul").not($(this).next()).css("display","none");
+                            $(this).next().css("display","block");
+                        });
+                    });
+                </script>
+    	</section>
+    </div>
+</body>
+</html>

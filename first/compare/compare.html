@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/compare.css">
+    <script type='text/javascript' src='../../same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='images/first1.png'><span>首页</span></li>
+                <li class='second-bar'><img src='images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+                $(".first-bar").on("touchstart",function() { location.href='../../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../../mine.html'; });
+        </script>
+    	<header>
+    		<ul class="headercontent">
+    			<li class="heco1"></li>
+    			<li class="heco2">择校对比</li>
+    		</ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+            </script>
+    	</header>
+        <section>
+            <table>
+                <tr class="same1">
+                    <th class="firstrow firstcol">学校名称</th>
+                    <th class="firstrow secondcol cancel">爱丁堡斯坦纳学校<div class="cancelicon"><img src="images/cancel.png"></div></th>
+                    <th class="firstrow cancel">基督大教堂学校<div class="cancelicon"><img src="images/cancel.png"></div></th>
+                </tr>
+                <tr class="same1">
+                    <th class="firstcol">所在地区</th>
+                    <td class="secondcol">苏格兰</td>
+                    <td>东南英格兰</td>
+                </tr>
+                <tr class="same2">
+                    <th class="firstcol">成立时间</th>
+                    <td class="secondcol">1919年</td>
+                    <td>1546年</td>
+                </tr>
+                <tr class="same2">
+                    <th class="firstcol">学校类型</th>
+                    <td class="secondcol">男女混校</td>
+                    <td>男校</td>
+                </tr>
+                <tr class="same2">
+                    <th class="firstcol">学校排名</th>
+                    <td class="secondcol">QS：8</td>
+                    <td>QS：15</td>
+                </tr>
+                <tr class="same2">
+                    <th class="firstcol">入学年龄</th>
+                    <td class="secondcol">3.5-18岁</td>
+                    <td>7-13岁</td>
+                </tr>
+                <tr class="same2">
+                    <th class="firstcol">学费</th>
+                    <td class="secondcol">50英镑</td>
+                    <td>50英镑</td>
+                </tr>
+                <tr class="same2">
+                    <th class="firstcol">回国学生比例</th>
+                    <td class="secondcol">35%</td>
+                    <td>40%</td>
+                </tr>
+                <tr class="same2">
+                    <th class="firstcol">学校面积</th>
+                    <td class="secondcol">1000公顷</td>
+                    <td>1200公顷</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

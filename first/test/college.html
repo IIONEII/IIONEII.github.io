@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+    <script type='text/javascript' src='../../same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='images/first1.png'><span>首页</span></li>
+                <li class='second-bar'><img src='images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+                $(".first-bar").on("touchstart",function() { location.href='../../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../../mine.html'; });
+        </script>
+    	<header>
+    		<ul class="headercontent">
+    			<li class="heco1"></li>
+    			<li class="heco2">在线测评</li>
+    		</ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+            </script>
+    	</header>
+        <section>
+            <div class="question">
+                <h1>1.</h1>
+                <div>
+                    <p>Most university students __________ on campus in their first year.</p>
+                    <input type="radio"><span>A. lives</span><br>
+                    <input type="radio"><span>B. live</span><br>
+                    <input type="radio"><span>C. are living</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>2.</h1>
+                <div>
+                    <p>From this graph we can see that the economy __________ at the moment.</p>
+                    <input type="radio"><span>A. improves</span><br>
+                    <input type="radio"><span>B. improve</span><br>
+                    <input type="radio"><span>C. is improving</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>3.</h1>
+                <div>
+                    <p>They __________ personal computers when my father was a student.</p>
+                    <input type="radio"><span>A. hadn’t</span><br>
+                    <input type="radio"><span>B. didn’t have</span><br>
+                    <input type="radio"><span>C. weren’t havingn</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>4.</h1>
+                <div>
+                    <p> I finished my essay yesterday but __________ it in to the tutor yet.</p>
+                    <input type="radio"><span>A. I’ve given</span><br>
+                    <input type="radio"><span>B. I haven’t given</span><br>
+                    <input type="radio"><span>C. I didn’t give</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>5.</h1>
+                <div>
+                    <p>If the trend continues, the average income __________ by 107% by 2020.</p>
+                    <input type="radio"><span>A. will increase</span><br>
+                    <input type="radio"><span>B. will have increased</span><br>
+                    <input type="radio"><span>C. will be increasing</span>
+                </div>
+            </div>
+            <div class="submit"></div>
+        </section>
+    </div>
+</body>
+</html>

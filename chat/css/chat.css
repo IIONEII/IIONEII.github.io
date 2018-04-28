@@ -1,0 +1,103 @@
+header {
+	background: linear-gradient(to right,#76dafe,#2fe1a5);
+	width: 750px;
+	height: 88px;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+header .position {
+	display: flex;
+	width: 230px;
+	height: 48px;
+    margin: 0 auto;
+    margin-top: 18px;
+    font-size: 30px;
+    border: 2px solid #fff;
+    border-radius: 5px 5px;
+}
+.position div {
+	width: 115px;
+	height: 100%;
+	text-align: center;
+	line-height: 48px;
+	color: #fff;
+}
+.position .change {
+	background-color: #fff;
+	color: #4bdec9;
+}
+
+
+section {
+	margin-top: 88px;
+	width: 750px;
+	border-top: 10px solid #e8e8e8;
+}
+.friend {
+	width: 750px;
+	height: 141px;
+	border-bottom: 2px solid #e8e8e8;
+	display: flex;
+	background-color: white;
+}
+.friend img {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 20px 30px 0 24px;
+}
+.friend h3 {
+	font-size: 30px;
+	color: #393939;
+	height: 141px;
+	line-height: 141px;
+}
+.message {
+	width: 750px;
+	height: 141px;
+	border-bottom: 2px solid #e8e8e8;
+	display: flex;
+	background-color: white;
+	position: relative;
+}
+.message > img {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 20px 30px 0 24px;
+}
+.message .information {
+	margin-top: 40px;
+	width: 570px;
+}
+.message .information h3 {
+    font-size: 28px;
+    color: #393939;
+    margin-bottom: 10px;
+}
+.message .information p {
+	font-size: 22px;
+	color: #9f9f9f;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+}
+.message .sign {
+	position: absolute;
+	top: 10px;
+	left: 114px;
+	width: 20px;
+	height: 20px;
+}
+.message .time {
+	position: absolute;
+	top: 40px;
+	right: 24px;
+	font-size: 20px;
+	color: #e8e8e8;
+}

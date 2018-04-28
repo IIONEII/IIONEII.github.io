@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="chat/css/chat.css">
+    <script type='text/javascript' src='same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='images/first.png'><span>首页</span></li>
+                <li class='second-bar'><img src='images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='images/third1.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".first-bar").on("touchstart",function() { location.href='index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='mine.html'; });
+            });
+        </script>
+    	<header>
+    		<div class="position">
+    			<div class="change">消息</div>
+    			<div>朋友</div>
+    		</div>
+    	</header>
+    	<script type="text/javascript">
+    		var header=$(".position > div");
+    		function reset() {
+    			for(var i=0;i<header.length;i++) {
+                    header[i].className='';
+    		    }
+    		    $("section > div").css("display","none");
+    		}
+            header[0].ontouchstart=function() { reset();header[0].className='change';$("section .ismessage").css("display","block"); };
+            header[1].ontouchstart=function() { reset();header[1].className='change';$("section .isfriend").css("display","block"); };
+    	</script>
+    	<section>
+    		<div class="isfriend" style="display: none;">
+        		<div class="friend same">
+        		    <img src="chat/images/02.png"><h3>小易Service</h3>
+        		</div>
+        		<div class="friend same">
+        		    <img src="chat/images/03.png"><h3>bill</h3>
+        		</div>
+        		<div class="friend same">
+        		    <img src="chat/images/01.png"><h3>peggy</h3>
+        		</div>
+        		<div class="friend same">
+        		    <img src="chat/images/04.png"><h3>david</h3>
+        		</div>
+        	</div>
+        	<div class="ismessage">
+        		<div class="message same">
+        		    <img src="chat/images/02.png"><div class="sign"><img src="chat/images/11.png"></div><div class="information"><h3>小易Service</h3><p>[转账]向你转账1600.00元</p></div><span class="time">02-18</span>
+        		</div>
+        		<div class="message same">
+        		    <img src="chat/images/02.png"><div class="sign"><img src="chat/images/12.png"></div><div class="information"><h3>Joker</h3><p>我通过了你的朋友验证请求，现在我们可以聊天了。</p></div><span class="time">02-18</span>
+        		</div>
+        	</div>
+            <script type="text/javascript">
+                $(".same").each(function() {
+                    $(this).on("touchstart",function() { location.href="chat/message/message.html" });
+                });
+            </script>
+        </section>
+    </div>
+</body>
+</html>

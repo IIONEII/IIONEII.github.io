@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="first/css/first.css">
+    <script type='text/javascript' src='same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='images/first1.png'><span>首页</span></li>
+                <li class='second-bar'><img src='images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".first-bar").on("touchstart",function() { location.href='index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='mine.html'; });
+            });
+        </script>
+    	<header>
+    		<div class="position">
+    			<div class="position-name">英国</div>
+    			<div class="position-icon"><img src="images/position-icon.png"></div>
+    		</div>
+    		<div class="search"></div>
+            <script type="text/javascript">
+                $("header > .search").on("touchstart",function() { location.href="search/search.html"; })
+            </script>
+    	</header>
+    	<section>
+            <script type="text/javascript" src="first/first-banner.js"></script>
+            <nav>
+        		<ul class='tools'>
+        			<li class='change'><img src='first/images/change.png'><span>院校对比</span></li>
+        			<li class='test'><img src='first/images/english.png'><span>在线测评</span></li>
+        			<li class='english'><img src='first/images/test.png'><span>一键申请</span></li>
+        			<li class='more'><img src='first/images/more.png'><span>更多工具</span></li>
+        		</ul>
+            </nav>
+            <div class="easyapply samemenunav">
+                <div class="eacontent samemenunavco">
+                    <div class="selfapply samemenunavfirst"><img src="first/images/self.png"></div>
+                    <div class="otherapply"><img src="first/images/contact.png"></div>
+                </div>
+                <div class="cancelapply"><img src="first/images/cancel.png"></div>
+            </div>
+            <div class="onlinetest samemenunav">
+                <div class="oncontent samemenunavco">
+                    <div class="collegetest samemenunavfirst"><img src="first/images/college.png"></div>
+                    <div class="middletest"><img src="first/images/middle.png"></div>
+                </div>
+                <div class="cancelapply"><img src="first/images/cancel.png"></div>
+            </div>
+            <script type="text/javascript">
+                $(".change").on("touchstart",function() { location.href="first/compare/compare.html"; });
+                $(".more").on("touchstart",function() { location.href="first/tools/tools.html"; });
+
+                $(".test").on("touchstart",function() {
+                    $(".onlinetest").css("display","block");
+                });
+                $(".collegetest").on("touchstart",function() { location.href="first/test/college.html" });
+                $(".middletest").on("touchstart",function() { location.href="first/test/middle.html" });
+
+                $(".english").on("touchstart",function() {
+                    $(".easyapply").css("display","block");
+                });
+
+                $(".cancelapply").on("touchstart",function() {
+                    $(".easyapply").css("display","none");
+                    $(".onlinetest").css("display","none");
+                })
+
+                $(".selfapply").on("touchstart",function() { location.href="first/apply/selfapply.html" });
+                $(".otherapply").on("touchstart",function() { location.href="chat/message/message.html" });
+
+            </script>
+            <div class="margin">
+            	<div class="selected">
+            		<div class="header"><h3>Selected</h3><p>推荐院校</p></div>
+            		<div class="selected-banner">
+            			<div class="selected-change1 selected-change">
+            				<div class="selected-image selected-image1"><div>剑桥大学</div></div>
+            				<div class="selected-message"><h3>QS排名：5</h3><div><img src="first/images/selected-icon.png"><span class="selected-number">526人申请</span></div></div>
+            			</div>
+            			<div class="selected-change2 selected-change">
+            				<div class="selected-image selected-image2"><div>曼切斯特大学</div></div>
+            				<div class="selected-message"><h3>QS排名：34</h3><div><img src="first/images/selected-icon.png"><span class="selected-number">1024人申请</span></div></div>
+            			</div>
+            			<div class="selected-change3 selected-change">
+            				<div class="selected-image selected-image3"><div>谢菲尔德大学</div></div>
+            				<div class="selected-message"><h3>QS排名：82</h3><div><img src="first/images/selected-icon.png"><span class="selected-number">935人申请</span></div></div>
+            			</div>
+            			<div class="selected-change4 selected-change">
+            				<div class="selected-image selected-image4"><div>伯明翰大学</div></div>
+            				<div class="selected-message"><h3>QS排名：84</h3><div><img src="first/images/selected-icon.png"><span class="selected-number">1589人申请</span></div></div>
+            			</div>
+            			<div class="selected-change5 selected-change">
+            				<div class="selected-image selected-image5"><div>伊顿公学</div></div>
+            				<div class="selected-message"><h3>UK排名：77</h3><div><img src="first/images/selected-icon.png"><span class="selected-number">120人申请</span></div></div>
+            			</div>
+                        <div class="selected-change6 selected-change">
+                            <div class="selected-image selected-image6"><div>罗素中学</div></div>
+                            <div class="selected-message"><h3>UK排名：23</h3><div><img src="first/images/selected-icon.png"><span class="selected-number">223人申请</span></div></div>
+                        </div>
+            		</div>
+            	</div>
+                <script type="text/javascript">
+                    $(".selected-banner > .selected-change1").click(function() { location.href="school/cambridge.html?name=jian"; });
+                    $(".selected-banner > .selected-change2").click(function() { location.href="school/cambridge.html?name=man"; });
+                    $(".selected-banner > .selected-change3").click(function() { location.href="school/cambridge.html?name=xie"; });
+                    $(".selected-banner > .selected-change4").click(function() { location.href="school/cambridge.html?name=bo"; });
+                    $(".selected-banner > .selected-change5").click(function() { location.href="school/cambridge.html?name=a"; });
+                    $(".selected-banner > .selected-change6").click(function() { location.href="school/cambridge.html?name=luo"; });
+                </script>
+            	<div class="recommend">
+            		<div class="header"><h3>Recommend</h3><p>优质中学</p></div>
+            		<div class="recommend-banner">
+            			<div class="recommend-change rechmale">
+            				<div class="recommend-image recommend-image1"><div>男校</div></div>
+            			</div>
+            			<div class="recommend-change rechfemale">
+            				<div class="recommend-image recommend-image2"><div>女校</div></div>
+            			</div>
+            			<div class="recommend-change rechmix">
+            				<div class="recommend-image recommend-image3"><div>混校</div></div>
+            			</div>
+            		</div>
+            	</div>
+                <script type="text/javascript">
+                    $(".rechmale").click(function() { location.href="search/search.html?change=mimale"; });
+                    $(".rechfemale").click(function() { location.href="search/search.html?change=mifemale"; });
+                    $(".rechmix").click(function() { location.href="search/search.html?change=mimix"; });
+                </script>
+            	<div class="hot">
+            		<div class="header"><h3>Hot University</h3><p>热招大学</p></div>
+            		<div class="hot-banner">
+            			<div class="hot-change hoch1">
+            				<div class="hot-image hot-image1"><div>英格兰地区</div></div>
+            			</div>
+            			<div class="hot-change hoch2">
+            				<div class="hot-image hot-image2"><div>苏格兰地区</div></div>
+            			</div>
+            			<div class="hot-change hoch3">
+            				<div class="hot-image hot-image3"><div>北爱尔兰地区</div></div>
+            			</div>
+            			<div class="hot-change hoch4">
+            				<div class="hot-image hot-image4"><div>威尔士地区</div></div>
+            			</div>
+            		</div>
+            	</div>
+                <script type="text/javascript">
+                    $(".hoch1").click(function() { location.href="search/search.html?change=unying"; });
+                    $(".hoch2").click(function() { location.href="search/search.html?change=unsu"; });
+                    $(".hoch3").click(function() { location.href="search/search.html?change=unbei"; });
+                    $(".hoch4").click(function() { location.href="search/search.html?change=unwei"; });
+                </script>
+            	<div class="model">
+            		<div class="header"><h3>Model</h3><p>典范小学</p></div>
+            		<div class="model-banner">
+            			<div class="model-change prchmale">
+            				<div class="model-image model-image0"><div>男校</div></div>
+            			</div>
+            			<div class="model-change prchfemale">
+            				<div class="model-image model-image1"><div>女校</div></div>
+            			</div>
+            			<div class="model-change  prchmix">
+            				<div class="model-image model-image2"><div>混校</div></div>
+            			</div>
+            		</div>	
+            	</div>
+                <script type="text/javascript">
+                    $(".prchmale").click(function() { location.href="search/search.html?change=prmale"; });
+                    $(".prchfemale").click(function() { location.href="search/search.html?change=prfemale"; });
+                    $(".prchmix").click(function() { location.href="search/search.html?change=prmix"; });
+                </script>
+            	<script type="text/javascript" src="first/first-ad.js"></script>
+            </div>
+            <div class="college">
+            	<div class="header"><h3>College dynamic</h3><p>学院资讯</p></div>
+            	<div class="card">
+            		<div class="banner-change">
+            			<div class="image image1"></div>
+            			<div class="topic">关于英国大学各档次选校我的的一点儿心得分享</div>
+            			<div class="message"><div class="left"><img src="first/images/portrait1.png"><h3>David</h3></div><div class="right"><img src="first/images/love.png"><span class="selected-number">158</span></div></div>
+            		</div>
+            		<div class="banner-change">
+            			<div class="image image2"></div>
+            			<div class="topic">[硕士申请] Offer比较：格拉斯哥，杜伦，利兹，拉夫堡，埃塞克斯如何选</div>
+            			<div class="message"><div class="left"><img src="first/images/portrait2.png"><h3>Amy</h3></div><div class="right"><img src="first/images/love.png"><span class="selected-number">182</span></div></div>
+            		</div>
+            		<div class="banner-change">
+            			<div class="image image3"></div>
+            			<div class="topic">[答疑] 英国留学Warwick华威大学EM工程管理项目介绍</div>
+            			<div class="message"><div class="left"><img src="first/images/portrait3.png"><h3>Kayber</h3></div><div class="right"><img src="first/images/love.png"><span class="selected-number">245</span></div></div>
+            		</div>
+            		<div class="banner-change">
+            			<div class="image image4"></div>
+            			<div class="topic">[资源信息共享] 留学英国谢菲尔德大学Journalism新闻类专业详解</div>
+            			<div class="message"><div class="left"><img src="first/images/portrait4.png"><h3>Peggy</h3></div><div class="right"><img src="first/images/love.png"><span class="selected-number">871</span></div></div>
+            		</div>
+            	</div>
+            </div>
+            <script type="text/javascript">
+                $(".right").each(function() {
+                    $(this).on("touchstart",function() {
+                        $(this).children("img").attr("src","first/images/agree.png");
+                        $(this).children("span").text(parseInt($(this).children("span").text())+1);
+                    });
+                });
+                $(".image").each(function() {
+                    $(this).click(function() { location.href="forum/forum.html" });
+                });
+            	$(".banner-change:even").css("marginRight","42px");
+            </script>
+    	</section>
+    </div>
+</body>
+</html>

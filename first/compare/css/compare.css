@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+header {
+	background: linear-gradient(to right,#76dafe,#2fe1a5);
+	width: 750px;
+	height: 88px;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+header .headercontent {
+	width: 702px;
+	height: 50px;
+	margin: 19px auto;
+	display: flex;
+}
+.heco1 {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/back.png);
+}
+.heco2 {
+	width: 602px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 38px;
+}
+
+
+section {
+	width: 750px;
+	margin-top: 88px;
+	background-color: #f2f2f2;
+	padding-bottom: 500px;
+}
+
+table {
+	width: 750px;
+	font-size: 24px;
+	color: #393939;
+}
+table th,td {
+	text-align: center;
+}
+table .firstrow {
+	border-top: 0.5px solid white;
+	border-bottom: 6px solid white;
+}
+table .firstcol {
+	width: 210px;
+	border-right: 10px solid white;
+}
+table .secondcol {
+	width: 260px;
+	border-right: 2px solid white;
+}
+table .same1 {
+	height: 150px;
+}
+table .same2 {
+	height: 80px;
+}
+
+.cancel {
+	position: relative;
+}
+.cancelicon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}

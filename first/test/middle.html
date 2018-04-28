@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+    <script type='text/javascript' src='../../same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='images/first1.png'><span>首页</span></li>
+                <li class='second-bar'><img src='images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+                $(".first-bar").on("touchstart",function() { location.href='../../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../../mine.html'; });
+        </script>
+    	<header>
+    		<ul class="headercontent">
+    			<li class="heco1"></li>
+    			<li class="heco2">在线测评</li>
+    		</ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+            </script>
+    	</header>
+        <section>
+            <div class="question">
+                <h1>1.</h1>
+                <div>
+                    <p>1. Where_______ from?I’m from Russia.</p>
+                    <input type="radio"><span>A. you are</span><br>
+                    <input type="radio"><span>B. you</span><br>
+                    <input type="radio"><span>C. are you</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>2.</h1>
+                <div>
+                    <p>We have ______house in Moscow.</p>
+                    <input type="radio"><span>A. any</span><br>
+                    <input type="radio"><span>B. a</span><br>
+                    <input type="radio"><span>C. an</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>3.</h1>
+                <div>
+                    <p> I have two______ , a boy and a girl.</p>
+                    <input type="radio"><span>A. sons</span><br>
+                    <input type="radio"><span>B. daughters</span><br>
+                    <input type="radio"><span>C. children</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>4.</h1>
+                <div>
+                    <p>I work in a ______. I’m a doctor.</p>
+                    <input type="radio"><span>A. hospital</span><br>
+                    <input type="radio"><span>B. hotel</span><br>
+                    <input type="radio"><span>C. supermarket</span>
+                </div>
+            </div>
+            <div class="question">
+                <h1>5.</h1>
+                <div>
+                    <p>This is my brother. _______name’s Paul.</p>
+                    <input type="radio"><span>A. Her</span><br>
+                    <input type="radio"><span>B. His</span><br>
+                    <input type="radio"><span>C. He’s</span>
+                </div>
+            </div>
+            <div class="submit"></div>
+        </section>
+    </div>
+</body>
+</html>

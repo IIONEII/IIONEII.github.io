@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/tools.css">
+    <script type='text/javascript' src='../../same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='images/first1.png'><span>首页</span></li>
+                <li class='second-bar'><img src='images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".first-bar").on("touchstart",function() { location.href='../../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../../mine.html'; });
+            });
+        </script>
+    	<header>
+            <ul class="headercontent">
+                <li class="heco1"></li>
+                <li class="heco2">在线测评</li>
+            </ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+            </script>
+        </header>
+    	<section>
+            <div class="catalog">
+                <div class="view-icon"><img src="images/apply.png"></div><h3>一键申请</h3>
+            </div>
+    		<div class="catalog">
+        		<div class="view-icon"><img src="images/compare.png"></div><h3>院校对比</h3>
+    		</div>
+    		<div class="catalog">
+        		<div class="view-icon"><img src="images/test.png"></div><h3>在线测评</h3>
+    		</div>
+    		<div class="catalog">
+        		<div class="view-icon"><img src="images/base.png"></div><h3>模拟题库</h3>
+    		</div>
+    		<div class="catalog">
+        		<div class="view-icon"><img src="images/visa.png"></div><h3>签证申请</h3>
+    		</div>
+    		<div class="catalog">
+        		<div class="view-icon"><img src="images/house.png"></div><h3>找房租房</h3>
+    		</div>
+    		<div class="catalog">
+        		<div class="view-icon"><img src="images/service.png"></div><h3>监护服务</h3>
+    		</div>
+            <script type="text/javascript">
+                $(".catalog").eq(0).on("touchstart",function() { location.href="../apply/selfapply.html" });
+                $(".catalog").eq(1).on("touchstart",function() { location.href="../compare/compare.html" });
+                $(".catalog").eq(2).on("touchstart",function() { location.href="../test/test.html" });
+                $(".catalog").eq(3).on("touchstart",function() { location.href="../test/test.html" });
+                $(".catalog").eq(4).on("touchstart",function() { location.href="../../footer.html" });
+                $(".catalog").eq(5).on("touchstart",function() { location.href="../../footer.html" });
+                $(".catalog").eq(6).on("touchstart",function() { location.href="../../footer.html" });
+            </script>
+    	</section>
+    </div>
+</body>
+</html>

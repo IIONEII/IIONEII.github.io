@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/message.css">
+    <script type='text/javascript' src='../../same/jquery-2.0.2.js'></script>
+</head>
+<body>
+    <div id="main">
+    	<header>
+    		<ul class="headercontent">
+    			<li class="heco1"></li>
+    			<li class="heco2">小易Service</li>
+    			<li class="heco3"></li>
+    		</ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+            </script>
+    	</header>
+        <section>
+            <div class="messageinput">
+                <div class="voice"></div>
+                <input id="search" type="text">
+                <div class="face"></div>
+                <div class="add"></div>
+            </div>
+            <div class="other">
+                <div class="othericon"><img src="images/other.png"></div>
+                <div class="othermessage">您好，请问有什么事儿吗？</div>
+            </div>
+            <div class="self">
+                <div class="selficon"><img src="images/self.png"></div>
+                <div class="selfmessage">Hello，您好，我想问你一下关于留学的事情。</div>
+            </div>
+            <div class="other">
+                <div class="othericon"><img src="images/other.png"></div>
+                <div class="othermessage height"><img src="images/voicemessage.png"></div>
+                <div class="othertime">9s</div>
+            </div>
+            <div class="self">
+                <div class="selficon"><img src="images/self.png"></div>
+                <div class="selfmessage">是的，是这样的。</div>
+            </div>
+            <script type="text/javascript">
+                $("#search").focus(function() {
+                    $("section").css("paddingBottom","300px");
+                })
+            </script>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/forum.css">
+    <script type='text/javascript' src='../same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='../images/first1.png'><span>首页</span></li>
+                <li class='second-bar'><img src='../images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='../images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='../images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+                $(".first-bar").on("touchstart",function() { location.href='../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../mine.html'; });
+        </script>
+    	<header>
+    		<ul class="headercontent">
+    			<li class="heco1"></li>
+    			<li class="heco2">正文</li>
+    			<li class="heco3"></li>
+    		</ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+            </script>
+    	</header>
+        <section>
+            <div class="content">
+                <div class="realcontent">
+                    <div class="user">
+                        <div class="userpor"><img src="images/1.png"></div>
+                        <div class="userinfo">
+                            <h2>Prestige</h2>
+                            <p><span>12小时前</span>来自iphone x</p>
+                        </div>
+                    </div>
+                    <p>本人211非985毕业，英文专业，雅思7，想当年双子座病犯了，纠结不定，结果DIY申请了美国、英国、香港、新加坡的学校，虽然结果很满意，拿到了纽约大学、加州大学、IC、KCL、港中大、NUS和NTU等大学的offer,  但又进入了下一轮纠结环节。非常感谢太傻很多大神的帖子，现在来回报论坛。有任何申请问题，可以在下面留言，有时间我都会来答疑。</p>
+                    <div class="image"><img src="images/forum.png"></div>
+                </div>
+                <div class="comment">
+                    <div class="useraction">
+                        <span>转发 66</span><span>评论 58</span><span>赞 1289</span>
+                    </div>
+                    <div class="usercomment">
+                        <div class="userpor"><img src="images/2.png"></div>
+                        <div class="userinfo">
+                            <h2>PEC</h2>
+                            <p>谢谢楼主分享，不过想问一下KCL的录取条件是什么呢</p>
+                            <div class="realcomment"><p><span>我不是：</span>同问+1</p>
+                                 <p><span>共58条评论></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

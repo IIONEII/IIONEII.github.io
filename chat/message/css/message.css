@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+header {
+	background: linear-gradient(to right,#76dafe,#2fe1a5);
+	width: 750px;
+	height: 88px;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+header .headercontent {
+	width: 702px;
+	height: 50px;
+	margin: 19px auto;
+	display: flex;
+	justify-content: space-between;
+}
+header .headercontent li {
+	list-style: none;
+}
+.heco1 {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/back.png);
+}
+.heco2 {
+	width: 602px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 38px;
+}
+.heco3 {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/more.png);
+}
+
+
+
+section {
+	width: 750px;
+	margin-top: 88px;
+	background-color: #f2f2f2;
+	padding: 0 24px;
+	padding-bottom: 600px;
+}
+
+
+.messageinput {
+	width: 750px;
+	height: 88px;
+	position: fixed;
+	left: 0;
+	bottom: 0px;
+	background-color: rgb(238,238,239);
+	display: flex;
+}
+.voice {
+	width: 74px;
+	height: 74px;
+	margin: 7px 10px;
+	background: url(../images/voice.png) center center no-repeat;
+	background-size: 100% 100%;
+	border-radius: 50% 50%;
+}
+#search {
+	width: 490px;
+	height: 78px;
+	margin: 5px auto;
+	border: none;
+	color: #393939;
+	font-size: 34px;
+	border-radius: 10px;
+}
+.face {
+	width: 74px;
+	height: 74px;
+	margin: 7px 0 7px 5px;
+	background: url(../images/face.png) center center no-repeat;
+	background-size: 100% 100%;
+	border-radius: 50% 50%;
+}
+.add {
+	width: 74px;
+	height: 74px;
+	margin: 7px 5px;
+	background: url(../images/add.png) center center no-repeat;
+	background-size: 100% 100%;
+	border-radius: 50% 50%;
+}
+
+
+.other {
+	width: 702px;
+	display: flex;
+	padding-top: 20px;
+}
+.othericon {
+	width: 120px;
+	height: 120px;
+	border-radius: 15px;
+	overflow: hidden;
+	margin-right: 50px;
+}
+.height > img {
+	margin-top: 18px;
+}
+.othermessage {
+	width: 380px;
+	line-height: 50px;
+	position: relative;
+	margin-right: 10px;
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 26px;
+	color: #393939;
+}
+.othermessage::before {
+	content: '';
+	border: 30px solid white;
+	position: absolute;
+	top: 42px;
+	margin-top: -30px;
+	left: -60px;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+}
+.height {
+	height: 84px;
+}
+.othertime {
+	width: 80px;
+	height: 84px;
+	line-height: 84px;
+	color: #acacac;
+	font-size: 24px;
+	margin-top: 18px;
+}
+
+.self {
+	width: 702px;
+	display: flex;
+	flex-direction: row-reverse;
+	padding-top: 20px;
+	margin-top: 20px;
+}
+.selficon {
+	width: 120px;
+	height: 120px;
+	border-radius: 15px;
+	overflow: hidden;
+	margin-left: 50px;
+}
+.selfmessage {
+	width: 380px;
+	height: 84px;
+	line-height: 84px;
+	position: relative;
+	margin-left: 10px;
+	background-color: #009ed9;
+	border-radius: 10px;
+	margin-top: 18px;
+	padding-left: 20px;
+	font-size: 26px;
+	color: white;
+}
+.selfmessage::before {
+	content: '';
+	border: 30px solid #009ed9;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	right: -60px;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}

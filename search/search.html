@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<script type='text/javascript' src='../same/jquery-2.0.2.js'></script>
+	<style type='text/css'>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#main {
+			background-color: #f2f2f2;
+			width: 750px;
+		}
+		#navigation {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(to right,#76dafe,#2fe1a5);
+			width: 100%;
+			height: 98px;
+			z-index: 100;
+		}
+		.nav-bar {
+			width: 630px;
+			height: 88px;
+			margin: 0 auto;
+			margin-top: 10px;
+			display: flex;
+		}
+		.nav-bar li {
+			list-style: none;
+			width: 50px;
+			height: 82px;
+			margin-right: 144px;
+		}
+		.nav-bar li span {
+			display: block;
+			text-align: center;
+			font-size: 22px;
+			color: white;
+			margin-bottom: -15px;
+		}
+	</style>
+</head>
+<body>
+    <div id="main">
+    	<div id='navigation'>
+    		<ul class='nav-bar'>
+    			<li class='first-bar'><img src='../images/first1.png'><span>首页</span></li>
+    			<li class='second-bar'><img src='../images/second.png'><span>审核</span></li>
+    			<li class='third-bar'><img src='../images/third.png'><span>消息</span></li>
+    			<li class='fourth-bar'><img src='../images/fourth.png'><span>我的</span></li>
+    		</ul>
+    	</div>
+    	<script type="text/javascript">
+    		$(document).ready(function() {
+                $(".first-bar").on("touchstart",function() { location.href='../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../mine.html'; });
+            });
+    	</script>
+    	<header>
+    		<div class="search">
+    			<input id="search" type="text" name="schoolname" value="搜索您感兴趣的学校">
+    			<div class="searchicon"></div>
+    		</div>
+    		<div class="cancel">取消</div>
+    		<script type="text/javascript">
+    			$("#search").focus(function() { $(this).val(''); });
+    			$("#search").blur(function() { $(this).val('搜索您感兴趣的学校'); });
+                $(".cancel").on("touchstart",function() { history.back(); })
+    		</script>
+    	</header>
+    	<section>
+    		<div class="somesearch">
+    			<h2 class="searchheader">历史搜索</h2>
+    			<ul class="historysearch">
+    				<li>哈佛大学</li>
+    				<li>剑桥大学</li>
+    				<li>男校</li>
+    			</ul>
+    			<h2 class="searchheader">热门搜索</h2>
+    			<ul class="hotsearch">
+    				<li>哈佛大学</li>
+    				<li>剑桥大学</li>
+    				<li>男校</li>
+    			</ul>
+    		</div>
+    		<div class="filter">
+                <div class="filterregion">
+                    <div class="filtericon"><img src="images/regeon.png"></div>
+                    <p>学校类型：</p>
+                    <ul class="fichange0">
+                        <li class="changeuniversity">大学</li>
+                        <li class="changemiddle">中学</li>
+                        <li class="changeprimary">小学</li>
+                    </ul>
+                </div>
+    			<div class="filterregion">
+    				<div class="filtericon"><img src="images/regeon.png"></div>
+    				<p>所在地区：</p>
+    				<ul class="fichange1">
+        				<li class="changeying">英格兰</li>
+        				<li class="changesu">苏格兰</li>
+        				<li class="changewei">威尔士</li>
+        				<li class="changebei">北爱尔兰</li>
+        			</ul>
+    			</div>
+    			<div class="filterhouse">
+    				<div class="filtericon"><img src="images/house.png"></div>
+    				<p>住宿类型：</p>
+    				<ul class="fichange2">
+        				<li>寄宿</li>
+        				<li>走读</li>
+        			</ul>
+    			</div>
+    			<div class="filterstudent">
+    				<div class="filtericon"><img src="images/student.png"></div>
+    				<p>学生类型：</p>
+    				<ul class="fichange3">
+        				<li class="changemale">男校</li>
+        				<li class="changefemale">女校</li>
+        				<li class="changemix">男女混合校</li>
+        			</ul>
+    			</div>
+    			<div class="filterlevel">
+    				<div class="filtericon"><img src="images/level.png"></div>
+    				<p class="filevelco">A-Level：</p>
+    				<ul class="fichange4">
+        				<li>40%-50%</li>
+        				<li>51%-70%</li>
+        				<li>70%以上</li>
+        			</ul>
+    			</div>
+    			<div class="filterscore">
+    				<div class="filtericon"><img src="images/score.png"></div>
+    				<p>雅思成绩：</p>
+    				<ul class="fichange5">
+        				<li>需要</li>
+        				<li>不需要</li>
+        			</ul>
+    			</div>
+    		</div>
+            <script type="text/javascript">
+                var result=location.search.substr(8);
+                switch (result) {
+                    case "mimale": $(".changemale").css({'backgroundColor':'#009ed9','color':'white'});$(".changemiddle").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "mifemale": $(".changefemale").css({'backgroundColor':'#009ed9','color':'white'});$(".changemiddle").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "mimix": $(".changemix").css({'backgroundColor':'#009ed9','color':'white'});$(".changemiddle").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "unying": $(".changeying").css({'backgroundColor':'#009ed9','color':'white'});$(".changeuniversity").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "unsu": $(".changesu").css({'backgroundColor':'#009ed9','color':'white'});$(".changeuniversity").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "unwei": $(".changewei").css({'backgroundColor':'#009ed9','color':'white'});$(".changeuniversity").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "unbei": $(".changebei").css({'backgroundColor':'#009ed9','color':'white'});$(".changeuniversity").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "prmale": $(".changemale").css({'backgroundColor':'#009ed9','color':'white'});$(".changeprimary").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "prfemale": $(".changemale").css({'backgroundColor':'#009ed9','color':'white'});$(".changeprimary").css({'backgroundColor':'#009ed9','color':'white'});break;
+                    case "prmix": $(".changemale").css({'backgroundColor':'#009ed9','color':'white'});$(".changeprimary").css({'backgroundColor':'#009ed9','color':'white'});break;
+                }
+            </script>
+    		<script type="text/javascript">
+                $(".fichange0 >li").each(function() {
+                    $(this).on("touchstart",function() {
+                        $(".fichange0 >li").not(this).css({'backgroundColor':'white','color':'black'});
+                        $(this).css({'backgroundColor':'#009ed9','color':'white'});
+                        
+                    });
+                });
+    			$(".fichange1 >li").each(function() {
+    				$(this).on("touchstart",function() {
+    					$(".fichange1 >li").not(this).css({'backgroundColor':'white','color':'black'});
+    					$(this).css({'backgroundColor':'#009ed9','color':'white'});
+    					
+    				});
+    			});
+    			$(".fichange2 >li").each(function() {
+    				$(this).on("touchstart",function() {
+    					$(".fichange2 >li").not(this).css({'backgroundColor':'white','color':'black'});
+    					$(this).css({'backgroundColor':'#009ed9','color':'white'});
+    					
+    				});
+    			});
+    			$(".fichange3 >li").each(function() {
+    				$(this).on("touchstart",function() {
+    					$(".fichange3 >li").not(this).css({'backgroundColor':'white','color':'black'});
+    					$(this).css({'backgroundColor':'#009ed9','color':'white'});
+    					
+    				});
+    			});
+    			$(".fichange4 >li").each(function() {
+    				$(this).on("touchstart",function() {
+    					$(".fichange4 >li").not(this).css({'backgroundColor':'white','color':'black'});
+    					$(this).css({'backgroundColor':'#009ed9','color':'white'});
+    					
+    				});
+    			});
+    			$(".fichange5 >li").each(function() {
+    				$(this).on("touchstart",function() {
+    					$(".fichange5 >li").not(this).css({'backgroundColor':'white','color':'black'});
+    					$(this).css({'backgroundColor':'#009ed9','color':'white'});
+    					
+    				});
+    			});
+    		</script>
+    		<div class="result">
+    			<p>符合条件的学校共<span>2512</span>所</p>
+    			<div class="resultline"></div>
+    			<div class="filtercontent">
+    				<div class="filterheader">
+    					<h2 class="fihechange">选择</h2>
+    					<h2 class="fiheschool">学校名称</h2>
+    					<h2 class="fihescore">站内评分</h2>
+    				</div>
+    			</div>
+    			<ul class="firecontent">
+    				<li class="fireimg"><img width="140" height="140" src="images/cam.png"></li>
+    				<li class="firename">
+    					<h3>剑桥大学</h3>
+    					<p>University of Cambridge</p>
+    					<p>校训：Hinc lucem et pocula sacra（此地乃启蒙之所和智慧之源）.</p>
+    				</li>
+    				<li class="firescore">8</li>
+    			</ul>
+    			<ul class="firecontent">
+    				<li class="fireimg"><img width="140" height="140" src="images/man.png"></li>
+    				<li class="firename">
+    					<h3>曼切斯特大学</h3>
+    					<p>University of Manchester</p>
+    					<p>校训是“Cognitio, Sapientia, Humanitas”，英文为“Knowledge, Wisdom, Humanity”，中文意思是“知识，智慧，人性”。</p>
+    				</li>
+    				<li class="firescore">7.4</li>
+    			</ul>
+    			<ul class="firecontent">
+    				<li class="fireimg"><img width="140" height="140" src="images/xie.png"></li>
+    				<li class="firename">
+    					<h3>谢菲尔德大学</h3>
+    					<p>University of Sheffield</p>
+    					<p>校训 Rerum Cognoscere Causas（探索真理，知其所以然）.</p>
+    				</li>
+    				<li class="firescore">7.3</li>
+    			</ul>
+    			<ul class="firecontent">
+    				<li class="fireimg"><img width="140" height="140" src="images/bo.png"></li>
+    				<li class="firename">
+    					<h3>伯明翰大学</h3>
+    					<p>University of Birmingham</p>
+    					<p>校训 Per Ardua Ad Alta (勤奋以达卓越)。</p>
+    				</li>
+    				<li class="firescore">7.2</li>
+    			</ul>
+    			<ul class="firecontent">
+    				<li class="fireimg"><img width="140" height="140" src="images/yidun.png"></li>
+    				<li class="firename">
+    					<h3>伊顿公学</h3>
+    					<p>Eton College</p>
+    					<p>校训 Rerum Cognoscere Causas（探索真理，知其所以然）.</p>
+    				</li>
+    				<li class="firescore">7.0</li>
+    			</ul>
+    		</div>
+    		<script type="text/javascript">
+    			$(".firecontent").eq(0).click(function() { location.href="../school/cambridge.html?name=jian" });
+                $(".firecontent").eq(1).click(function() { location.href="../school/cambridge.html?name=man" });
+                $(".firecontent").eq(2).click(function() { location.href="../school/cambridge.html?name=xie" });
+                $(".firecontent").eq(3).click(function() { location.href="../school/cambridge.html?name=bo" });
+                $(".firecontent").eq(4).click(function() { location.href="../school/cambridge.html?name=a" });
+    		</script>
+    	</section>
+    </div>
+</body>
+</html>

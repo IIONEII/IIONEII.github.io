@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+header {
+	background: linear-gradient(to right,#76dafe,#2fe1a5);
+	width: 750px;
+	height: 88px;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+header .headercontent {
+	width: 702px;
+	height: 50px;
+	margin: 19px auto;
+	display: flex;
+}
+.heco1 {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/back.png);
+}
+.heco2 {
+	width: 602px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 38px;
+}
+
+
+section {
+	width: 750px;
+	margin-top: 88px;
+	background-color: #f2f2f2;
+	padding-bottom: 500px;
+}
+
+
+.question {
+	padding: 50px 24px;
+	background-color: white;
+	margin-bottom: 10px;
+	display: flex;
+}
+.question > h1 {
+	font-size: 40px;
+	color: #393939;
+}
+.question p {
+	font-size: 40px;
+	color: #393939;
+}
+input {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+.question span {
+	font-size: 40px;
+	color: #393939;
+}
+
+.submit {
+	width: 300px;
+	height: 90px;
+	background-image: url(../images/submit.png);
+	margin: 100px auto;
+}

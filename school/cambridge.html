@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/school.css">
+    <script type='text/javascript' src='../same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='../images/first1.png'><span>首页</span></li>
+                <li class='second-bar'><img src='../images/second.png'><span>审核</span></li>
+                <li class='third-bar'><img src='../images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='../images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+                $(".first-bar").on("touchstart",function() { location.href='../index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='../footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='../chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='../mine.html'; });
+        </script>
+    	<header>
+    		<ul class="headercontent">
+    			<li class="heco1"></li>
+    			<li class="heco2">剑桥大学院校详情</li>
+    			<li class="heco3"><img src="images/love.png"></li>
+    		</ul>
+    	</header>
+
+    	<section>
+    		<div class="firstbanner">
+                <div class="displaybanner"><img src="images/b2.png"></div>
+                <div class="changebanner">
+                    <div><div><img src="images/b2.png"></div></div>
+                    <div><div><img src="images/b3.png"></div></div>
+                    <div><div><img src="images/b5.png"></div></div>
+                    <div><div><img src="images/b4.png"></div></div>
+                    <div><div><img src="images/b6.png"></div></div>
+                    <div><div><img src="images/b7.png"></div></div>
+                    <div><div><img src="images/b8.png"></div></div>
+                    <div><div><img src="images/b9.png"></div></div>
+                </div>
+            </div>
+    		<script type="text/javascript">
+                $(".heco3").on("touchstart",function() {
+                    $(this).html("<img src='images/collect.png'>");
+                })
+                $(".changebanner > div > div").each(function() {
+                    $(this).click(function() {
+                        $(".displaybanner").html($(this).html());
+                    });
+                });
+            </script>
+            <div class="schoolinfo">
+                <div class="schoolicon"></div>
+                <p class="schoolword">校训：Hinc lucem et pocula sacra（此地乃启蒙之所和智慧之源）.</p>
+                <ul>
+                    <li><span class="schoolrank">TIMES</span><span class="scorerank">第2名</span></li>
+                    <li><span class="schoolrank">QS排名</span><span class="scorerank">第5名</span></li>
+                </ul>
+            </div>
+    		<ul class="informationnav">
+    			<li class="infirstrow infirst infocollege"><div><img src="images/college.png"></div><span>学院概况</span></li>
+    			<li class="infirstrow infoteach"><div><img src="images/teach.png"></div><span>教学设施</span></li>
+    			<li class="infirstrow inultimate infohistory"><div><img src="images/history.png"></div><span>学校历史</span></li>
+    			<li class="insecondrow infirst infoadvantage"><div><img src="images/advantage.png"></div><span>优势专业</span></li>
+    			<li class="insecondrow infocondition"><div><img src="images/condition.png"></div><span>食宿条件</span></li>
+    			<li class="insecondrow inultimate infolocation"><div><img src="images/location.png"></div><span>地理位置</span></li>
+    		</ul>
+            <script type="text/javascript">
+                $(".heco1").on("touchstart",function() { history.back(); });
+                var result=location.search.substr(6);
+                switch(result) {
+                    case "jian": $(".heco2").html("剑桥大学院校详情");$(".schoolword").html("校训：Hinc lucem et pocula sacra（此地乃启蒙之所和智慧之源）.");$(".schoolicon").html("<img src='images/cam.png'>");break;
+
+                    case "man": $(".heco2").html("曼切斯特大学院校详情");$(".schoolword").html("校训是“Cognitio, Sapientia, Humanitas”，英文为“Knowledge, Wisdom, Humanity”，中文意思是“知识，智慧，人性”。");$(".schoolicon").html("<img width='152' height='152' src='images/man.png'>");break;
+
+                    case "xie": $(".heco2").html("谢菲尔德大学院校详情");$(".schoolword").html("谢菲尔德大学校训 Rerum Cognoscere Causas（探索真理，知其所以然）.");$(".schoolicon").html("<img src='images/xie.png'>");break;
+
+                    case "bo": $(".heco2").html("伯明翰大学院校详情");$(".schoolword").html("伯明翰大学校训 Per Ardua Ad Alta (勤奋以达卓越)");$(".schoolicon").html("<img src='images/bo.png'>");break;
+
+                    case "a": $(".heco2").html("伊顿公学院校详情");$(".schoolword").html("伊顿公学校训 Rerum Cognoscere Causas（探索真理，知其所以然）.");$(".schoolicon").html("<img src='images/yidun.png'>");break;
+                    
+                    case "luo": $(".heco2").html("罗素中学院校详情");$(".schoolword").html("罗素中学校训 Per Ardua Ad Alta (勤奋以达卓越).");$(".schoolicon").html("<img src='images/luosu.png'>");break;
+                }
+            </script>
+            <script type="text/javascript">
+                $(".infocollege").on("touchstart",function() { location.href="content/content.html?content=college"; });
+                $(".infoteach").on("touchstart",function() { location.href="content/content.html?content=teach"; });
+                $(".infohistory").on("touchstart",function() { location.href="content/content.html?content=history"; });
+                $(".infoadvantage").on("touchstart",function() { location.href="content/content.html?content=advantage"; });
+                $(".infocondition").on("touchstart",function() { location.href="content/content.html?content=condition"; });
+                $(".infolocation").on("touchstart",function() { location.href="content/content.html?content=location"; });
+            </script>
+            <div class="teacher">
+                <h2 class="contentheader">名师介绍</h2>
+                <ul class="tecontent">
+                    <li>
+                        <div class="teachericon"><img src="images/professor1.png"></div>
+                        <h3>Lemon</h3>
+                        <p>金融学教授</p>
+                        <div class="contact">联系老师</div>
+                    </li>
+                    <li>
+                        <div class="teachericon"><img src="images/professor2.png"></div>
+                        <h3>Lemon</h3>
+                        <p>金融学教授</p>
+                        <div class="contact">联系老师</div>
+                    </li>
+                    <li>
+                        <div class="teachericon"><img src="images/professor3.png"></div>
+                        <h3>Lemon</h3>
+                        <p>金融学教授</p>
+                        <div class="contact">联系老师</div>
+                    </li>
+                    <li>
+                        <div class="teachericon"><img src="images/professor1.png"></div>
+                        <h3>Lemon</h3>
+                        <p>金融学教授</p>
+                        <div class="contact">联系老师</div>
+                    </li>
+                    <li>
+                        <div class="teachericon"><img src="images/professor2.png"></div>
+                        <h3>Lemon</h3>
+                        <p>金融学教授</p>
+                        <div class="contact">联系老师</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="condition">
+                <h2 class="contentheader">录取条件</h2>
+                <ul class="cocontent">
+                    <li class="time">
+                        <div></div>
+                        <p>2017年8月</p>
+                        <h1>1</h1>
+                    </li>
+                    <li class="alltime">以开放申请184DAYS</li>
+                    <li class="time">
+                        <div></div>
+                        <p>2018年1月</p>
+                        <h1>29</h1>
+                    </li>
+                </ul>
+                <div class="coline"></div>
+                <ul class="coinfo">
+                    <li>语言要求</li>
+                    <li>录取率</li>
+                    <li>学术要求</li>
+                </ul>
+                <div class="icando">我能否录取</div>
+            </div>
+    		<div class="famous">
+    	        <h2 class="contentheader">已录取</h2>
+    	        <div class="facontent">
+    	        	<div class="facoco">
+    	        		<div class="faportrait"><img src="images/friend1.png"></div>
+    	        		<div class="introduction"><h3>David</h3><span>就读设计系专业</span></div>
+    	        	</div>
+    	        	<div class="facoco">
+    	        		<div class="faportrait"><img src="images/friend2.png"></div>
+    	        		<div class="introduction"><h3>David</h3><span>就读设计系专业</span></div>
+    	        	</div>
+    	        	<div class="facoco">
+    	        		<div class="faportrait"><img src="images/friend3.png"></div>
+    	        		<div class="introduction"><h3>David</h3><span>就读设计系专业</span></div>
+    	        	</div>
+    	        	<div class="facoco">
+    	        		<div class="faportrait"><img src="images/friend4.png"></div>
+    	        		<div class="introduction"><h3>David</h3><span>就读设计系专业</span></div>
+    	        	</div>
+    	        	<div class="facoco">
+    	        		<div class="faportrait"><img src="images/friend5.png"></div>
+    	        		<div class="introduction"><h3>David</h3><span>就读设计系专业</span></div>
+    	        	</div>
+    	        </div>
+                <div class="icando">我能否录取</div>
+    		</div>
+            <div class="forum">
+                <h2 class="contentheader">院校论坛</h2>
+                <ul class="focontent">
+                    <li class="box">
+                        <div class="pic"><img width="340" height="300" src="images/schoolforum1.png"></div>
+                        <p>[答疑] 要申请英国创意文化产业管理的硕士，关于实习方面有一个问题</p>
+                        <div class="agreeshare">
+                            <div class="agree"></div>
+                            <div class="share"></div>
+                        </div>
+                        <div class="userinfo">
+                            <div class="usericon"><img src="images/usericon1.png"></div>
+                            <div class="username">
+                                <h3>Bill</h3>
+                                <p>赶紧学习学习，要考试了</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="pic"><img width="340" height="300" src="images/schoolforum2.png"></div>
+                        <p>[资源信息共享] 留学英国谢菲尔德大学Journalism新闻类专业详解</p>
+                        <div class="agreeshare">
+                            <div class="agree"></div>
+                            <div class="share"></div>
+                        </div>
+                        <div class="userinfo">
+                            <div class="usericon"><img src="images/usericon2.png"></div>
+                            <div class="username">
+                                <h3>David</h3>
+                                <p>请EG联系</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="pic"><img width="340" height="300" src="images/schoolforum3.png"></div>
+                        <p>[答疑] 英国留学Warwick华威大学EM工程管理项目介绍</p>
+                        <div class="agreeshare">
+                            <div class="agree"></div>
+                            <div class="share"></div>
+                        </div>
+                        <div class="userinfo">
+                            <div class="usericon"><img src="images/usericon3.png"></div>
+                            <div class="username">
+                                <h3>Apple</h3>
+                                <p>我这儿有很多干货哦</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="pic"><img width="340" height="300" src="images/schoolforum4.png"></div>
+                        <p>[资源信息共享] 留学英国谢菲尔德大学Journalism新闻类专业详解</p>
+                        <div class="agreeshare">
+                            <div class="agree"></div>
+                            <div class="share"></div>
+                        </div>
+                        <div class="userinfo">
+                            <div class="usericon"><img src="images/usericon4.png"></div>
+                            <div class="username">
+                                <h3>Peggy</h3>
+                                <p>啊，这论文写的好烦啊</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <script type="text/javascript">
+                    $(".box").each(function() {
+                        $(this).click(function() { location.href="../forum/forum.html" });
+                    });
+                </script>
+            </div>
+    	</section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyGo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="footer/css/footer.css">
+    <script type='text/javascript' src='same/jquery-2.0.2.js'></script>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #f2f2f2;
+            width: 750px;
+        }
+        #navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right,#76dafe,#2fe1a5);
+            width: 100%;
+            height: 98px;
+            z-index: 100;
+        }
+        .nav-bar {
+            width: 630px;
+            height: 88px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+        }
+        .nav-bar li {
+            list-style: none;
+            width: 50px;
+            height: 82px;
+            margin-right: 144px;
+        }
+        .nav-bar li span {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            margin-bottom: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id='navigation'>
+            <ul class='nav-bar'>
+                <li class='first-bar'><img src='images/first.png'><span>首页</span></li>
+                <li class='second-bar'><img src='images/second1.png'><span>审核</span></li>
+                <li class='third-bar'><img src='images/third.png'><span>消息</span></li>
+                <li class='fourth-bar'><img src='images/fourth.png'><span>我的</span></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".first-bar").on("touchstart",function() { location.href='index.html'; });
+                $(".second-bar").on("touchstart",function() { location.href='footer.html'; });
+                $(".third-bar").on("touchstart",function() { location.href='chat.html'; });
+                $(".fourth-bar").on("touchstart",function() { location.href='mine.html'; });
+            });
+        </script>
+    	<header>申请进度</header>
+    	<section>
+    		<div class="margin">
+    			<div class="line"></div>
+    			<div class="visa same"><img src="footer/images/visa.png"><h3>签证申请</h3></div>
+    			<div class="visa-content same-margin">
+    				<img src="footer/images/dot.png">
+    				<div class="same-card">
+    				    <img src="footer/images/photo.png">
+    				    <div class="same-word"><h3>英国签证</h3><p>English VISA</p><p>申请人：Prestige</p><p>状态：<span>未通过</span></p></div>
+    			    </div>
+    		    </div>
+    			<div class="oversea same"><img src="footer/images/oversea.png"><h3>留学申请</h3></div>
+    			<div class="oversea-content same-margin">
+    				<img src="footer/images/dot.png">
+    				<div class="same-card cambridge">
+    				    <img src="footer/images/photo.png"><div class="same-word"><h3>剑桥大学</h3><p>cambridge University</p><p>申请专业：金融管理</p><p>状态：<span style="color: #9b9b9b;" class="oversea-span">书面材料递交中</span></p></div>
+    			    </div>
+    			</div>
+    			<div class="oversea-content same-margin">
+    				<img src="footer/images/dot.png">
+    				<div class="same-card manchester">
+    				    <img src="footer/images/photo.png"><div class="same-word"><h3>曼切斯特大学</h3><p>University of Manchester</p><p>申请专业：会计学</p><p>状态：<span style="color: #9b9b9b;" class="oversea-span">书面材料递交中</span></p></div>
+    			    </div>
+    			</div>
+    			<div class="house same"><img src="footer/images/house.png"><h3>公寓申请</h3></div>
+    			<div class="house-content same-margin">
+    				<img src="footer/images/dot.png">
+    				<div class="same-card">
+    				    <img src="footer/images/photo.png"><div class="same-word"><h3>艾斯公寓</h3><p>Aise apartment</p><p>申请人：Prestige</p><p>状态：<span style="color: red;" class="house-span">申请成功</span></p></div>
+    			    </div>
+    			</div>
+    		</div>
+            <!-- <script type="text/javascript">
+                $(".stanford").click(function() { location.href="school/cambridge.html"; })
+            </script> -->
+    		<div class="window">
+                <div class="cardcontent">
+                    <div class="realcontent">
+                        <div class="userinfo">
+                            <div class="usericon"></div>
+                            <div class="userco">
+                                <h2>小李</h2>
+                                <p>成都电子科技大学<br>金融学</p>
+                            </div>
+                        </div>
+                        <ul class="applyco">
+                            <li><h3>申请专业</h3><p>金融学</p></li>
+                            <li><h3>申请院校</h3><p>剑桥大学</p></li>
+                            <li><h3>申请学位</h3><p>硕士</p></li>
+                        </ul>
+                        <div class="process">
+                            <ul class="processco">
+                                <li class="bigco">
+                                    <div class="bigcircle"></div>
+                                    <p>站内免费申请</p>
+                                </li>
+                                <li class="smallco">
+                                    <div class="smallcircle"></div>
+                                    <p>1天</p>
+                                </li>
+                                <li class="bigco">
+                                    <div class="bigcircle"></div>
+                                    <p>确认留学方案</p>
+                                </li>
+                                <li class="smallco">
+                                    <div class="smallcircle"></div>
+                                    <p>4天</p>
+                                </li>
+                                <li class="bigco">
+                                    <div class="bigcircle"></div>
+                                    <p>材料准备完成</p>
+                                </li>
+                                <li class="smallco">
+                                    <div class="smallcircle"></div>
+                                    <p>当天</p>
+                                </li>
+                                <li class="bigco">
+                                    <div class="bigcircle"></div>
+                                    <p>申请发出，等待学校反馈</p>
+                                </li>
+                                <li class="smallco">
+                                    <div class="smallcircle"></div>
+                                    <p>30天</p>
+                                </li>
+                                <li class="bigco">
+                                    <div class="bigcircle"></div>
+                                    <p>获得有条件offer</p>
+                                </li>
+                                <li class="smallco">
+                                    <div class="smallcircle"></div>
+                                    <p>5天</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="close"><div class="closeicon"></div></div>
+                </div>
+                
+            </div>
+    		<script type="text/javascript">
+    			var actWindow=$(".window"),
+    			    actClose=$(".close"),
+    			    actContent=$(".same-margin");
+    			for (var i=0;i<actContent.length;i++) {
+    				actContent[i].onclick=function() {
+    					$(".window").css("display","block");
+    				}
+    			}
+    			$(".close").click(function() {
+    				$(".window").css("display","none");
+    			});
+    		</script>
+    	</section>
+    </div>
+</body>
+</html>
